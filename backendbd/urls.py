@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from appBackend import views
-
+from appBackend.views import userRegistrationView
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('empleados/', views.employeeData)
+    path('empleados/', views.employeeData),
+    path('', userRegistrationView)
 ]
